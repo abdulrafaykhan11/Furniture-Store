@@ -50,7 +50,8 @@
   text-align: center;
 }
 
-#products h1 , #contact h1{
+#products h1,
+#contact h1 {
   margin-bottom: 40px;
   font-weight: bold;
   color: #333;
@@ -113,13 +114,17 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: linear-gradient(135deg, rgba(226,170,170,1), rgba(209,141,141,1));
+  background: linear-gradient(
+    135deg,
+    rgba(226, 170, 170, 1),
+    rgba(209, 141, 141, 1)
+  );
   color: #fff;
   padding: 6px 10px;
   font-size: 0.85rem;
   border-radius: 12px;
   font-weight: 700;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -225,52 +230,52 @@
 .contact-form button:hover {
   background-color: #d18d8d;
 }
-.suc{
+.suc {
   border: 1px solid green !important;
 }
-.err{
+.err {
   border: 1px solid red !important;
 }
-.contact-form span{
+.contact-form span {
   color: red;
   font-size: 0.8rem;
 }
 
-#footer{
+#footer {
   background-color: #e2aaaa81;
   padding: 2rem;
   text-align: center;
 }
-#footer .lis{
+#footer .lis {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-#footer .lis li{
+#footer .lis li {
   list-style: none;
 }
-#footer .lis li a{
+#footer .lis li a {
   color: white;
   font-size: 1.5rem;
 }
-#footer .lis li a:hover{
+#footer .lis li a:hover {
   color: #d18d8d;
 }
-#footer .copy{
+#footer .copy {
   margin-top: 2rem;
 }
-#footer .copy p{
+#footer .copy p {
   color: white;
   font-size: 1rem;
 }
 
-#footer .copy p{
+#footer .copy p {
   color: white;
   font-size: 1rem;
 }
 
 @media (max-width: 576px) {
-  #footer .lis{
+  #footer .lis {
     flex-direction: column;
   }
 }
