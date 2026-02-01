@@ -235,3 +235,42 @@
   color: red;
   font-size: 0.8rem;
 }
+
+#footer{
+  background-color: #e2aaaa81;
+  padding: 2rem;
+  text-align: center;
+}
+#footer .lis{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#footer .lis li{
+  list-style: none;
+}
+#footer .lis li a{
+  color: white;
+  font-size: 1.5rem;
+}
+#footer .lis li a:hover{
+  color: #d18d8d;
+}
+#footer .copy{
+  margin-top: 2rem;
+}
+#footer .copy p{
+  color: white;
+  font-size: 1rem;
+}
+
+#footer .copy p{
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  #footer .lis{
+    flex-direction: column;
+  }
+}
