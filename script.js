@@ -24,20 +24,70 @@ filterBtn.forEach((button) => {
         })
     })
 })
-let form = document.querySelector("form")
-let user = document.querySelector("input[type='text']")
-let email = document.querySelector("input[type='email']")
-let message = document.querySelector("textarea")
-form.addEventListener("submit" , (e) => {
+
+let form = document.querySelector(".contact-form")
+let name = document.querySelector("#name")
+let email = document.querySelector("#email")
+let message = document.querySelector("#message")
+
+let nameErr = document.querySelector("#name-err")
+let emailErr = document.querySelector("#email-err")
+let messageErr = document.querySelector("#message-err")
+
+let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+form.addEventListener("keyup", (e) => {
     e.preventDefault()
-    if(user.value.length < 3 || message.value.length < 10){
-        user.classList.add("err")
-        message.classList.add("err")
+
+    let valid = true
+
+    let user = name.value.trim()
+    let useremail = email.value.trim()
+    let usermessage = message.value.trim()
+
+    // NAME
+    if (user.length < 3) {
+        name.classList.add("err")
+        name.classList.remove("suc")
+        nameErr.textContent = "Name must be at least 3 characters"
+        valid = false
+    } else {
+        name.classList.remove("err")
+        name.classList.add("suc")
+        nameErr.textContent = ""
     }
-    else{
-        user.classList.remove("err")
-        user.classList.add("suc")
+
+    // EMAIL
+    if (!emailRegex.test(useremail)) {
+        email.classList.add("err")
+        email.classList.remove("suc")
+        emailErr.textContent = "Email is not valid"
+        valid = false
+    } else {
+        email.classList.remove("err")
+        email.classList.add("suc")
+        emailErr.textContent = ""
+    }
+
+    // MESSAGE
+    if (usermessage.length < 10) {
+        message.classList.add("err")
+        message.classList.remove("suc")
+        messageErr.textContent = "Message must be at least 10 characters"
+        valid = false
+    } else {
         message.classList.remove("err")
         message.classList.add("suc")
+        messageErr.textContent = ""
+    }
+
+    // FINAL SUBMIT
+    if (valid) {
+        alert("Form submitted successfully 🎉")
+        form.reset()
+
+        name.classList.remove("suc")
+        email.classList.remove("suc")
+        message.classList.remove("suc")
     }
 })

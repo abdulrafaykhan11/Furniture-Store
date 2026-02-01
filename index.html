@@ -123,10 +123,13 @@
 <section id="contact"> 
     <h1 class="text-center">Contact Us</h1>
     <form id="contact" class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <input type="text" placeholder="Your Name" id="name">
+        <span id="name-err"></span>
+        <input type="email" placeholder="Your Email" id="email">
+        <span id="email-err"></span>
+        <textarea placeholder="Your Message" id="message"></textarea>
+        <span id="message-err"></span>
+        <button type="submit" class="btn submit">Send Message</button>
     </form>
 
 </section>

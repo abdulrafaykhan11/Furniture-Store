@@ -226,8 +226,12 @@
   background-color: #d18d8d;
 }
 .suc{
-  border: 1px solid green;
+  border: 1px solid green !important;
 }
 .err{
-  border: 1px solid red;
+  border: 1px solid red !important;
+}
+.contact-form span{
+  color: red;
+  font-size: 0.8rem;
 }
