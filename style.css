@@ -269,10 +269,7 @@
   font-size: 1rem;
 }
 
-#footer .copy p {
-  color: white;
-  font-size: 1rem;
-}
+
 
 @media (max-width: 576px) {
   #footer .lis {
