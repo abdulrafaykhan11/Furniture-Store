@@ -1,0 +1,233 @@
+.navbar {
+  background-color: #e2aaaa81;
+  padding: 1rem;
+}
+.navbar a {
+  color: #ffffff;
+  font-weight: bold;
+}
+#hero {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(230, 157, 157, 0.308)),
+    url("https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnVybml0dXJlfGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+#hero h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+#hero a {
+  display: inline-block;
+  background-color: #e2aaaa81;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 2s ease;
+}
+#hero a:hover {
+  background-color: #ffffff;
+  color: #e2aaaa81;
+}
+
+/* Products Section */
+#products {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#products h1 , #contact h1{
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn .btn {
+  background-color: transparent;
+  border: 2px solid #e2aaaa81;
+  color: #e2aaaa81; /* Using theme color for text initially or background? Let's go with solid for better visibility or outlined */
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+/* Let's make the buttons solid to match the hero button style mostly */
+.filter-btn .btn {
+  background-color: #e2aaaa81;
+  color: white;
+  border: none;
+}
+
+.filter-btn .btn:hover,
+.filter-btn .btn.active {
+  background-color: #d18d8d; /* Slightly darker for hover */
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Product Cards */
+.product-item .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.product-item .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item .card {
+  position: relative; /* needed for badge positioning */
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, rgba(226,170,170,1), rgba(209,141,141,1));
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.product-badge i {
+  font-size: 0.9rem;
+}
+
+.product-item .card:hover .product-badge {
+  transform: translateY(-6px);
+}
+
+.product-badge.product-badge-hot {
+  background: linear-gradient(135deg, #ff7a59, #ff4e3a);
+}
+
+.product-badge[title] {
+  cursor: default;
+}
+
+@media (max-width: 576px) {
+  .product-badge {
+    top: 8px;
+    right: 8px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+.product-item .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-item .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #e2aaaa; /* Theme color for price maybe? Or grey. Let's start with grey but price in theme color is nice */
+  color: #777;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.product-item .btn-primary {
+  background-color: #e2aaaa81;
+  border-color: #e2aaaa81;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.product-item .btn-primary:hover {
+  background-color: #d18d8d;
+  border-color: #d18d8d;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #e2aaaa81;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+.contact-form button {
+  background-color: #e2aaaa81;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #d18d8d;
+}
+.suc{
+  border: 1px solid green;
+}
+.err{
+  border: 1px solid red;
+}
