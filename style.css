@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 #hero {
-  height: 89vh;
+  height: 91vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,4 +275,29 @@
   #footer .lis {
     flex-direction: column;
   }
+}
+
+.modals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modals .modal-body {
+  padding: 2rem;
+}
+.modals .modal-body h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.modals .modal-body p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.modal-body{
+  background-color: #e2aaaa81;
+  border-color: #e2aaaa81;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  width: 100%;
 }
